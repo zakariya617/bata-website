@@ -18,11 +18,13 @@ const NaveBar = () => {
     <Box sx={{ height: '14%', width: '100%', backgroundColor: 'white', display: 'flex', flexDirection: 'row', position: 'fixed', top: "0", right: '0', left: '0', zIndex: '9999' }}>
       <Box sx={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'row', gap: "25px", alignItems: 'center' }}>
         <Box sx={{ height: '70%', width: '60%', backgroundColor: 'white', marginTop: '2%', marginLeft: '1%' }}>
-          <img
-            src='https://cdn.shopify.com/s/files/1/0143/1552/0054/files/Bata-logo_1_493d53de-402c-4029-9c9f-09562279dd99.png?v=1694065416'
-            alt="Logo"
-            style={{ height: '50%', width: '100%' }}
-          />
+          <Link to="/" style={{ display: 'block', width: '100%', height: '100%' }}>
+            <img
+              src='https://cdn.shopify.com/s/files/1/0143/1552/0054/files/Bata-logo_1_493d53de-402c-4029-9c9f-09562279dd99.png?v=1694065416'
+              alt="Logo"
+              style={{ height: '50%', width: '100%' }}
+            />
+          </Link>
         </Box>
 
         {navItems.map((item) => (
