@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const NaveBar = () => {
   return (
@@ -12,28 +13,82 @@ const NaveBar = () => {
             style={{ height: '50%', width: '97%' }}
           />
         </Box>
-       
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }}>MEN</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >WOMEN</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >KIDS</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >ACCESORIES</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >BAGS</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >BATACLUB</Typography>
-        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }} >SALE</Typography>
-        
+        <Typography
+          component={Link}
+          to="/men"
+          sx={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            color: 'black',
+            cursor: 'pointer',
+            marginRight: '4%',
+            textDecoration: 'none',
+            ':hover': { color: '#FFA500' },
+          }}
+        >
+          MEN
+        </Typography>
+        <Typography
+          component={Link}
+          to="/women"
+          sx={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            color: 'black',
+            cursor: 'pointer',
+            marginRight: '4%',
+            textDecoration: 'none',
+            ':hover': { color: '#FFA500' },
+          }}
+        >
+          WOMEN
+        </Typography>
+        <Typography
+          component={Link}
+          to="/kids"
+          sx={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            color: 'black',
+            cursor: 'pointer',
+            marginRight: '4%',
+            textDecoration: 'none',
+            ':hover': { color: '#FFA500' },
+          }}
+        >
+          KIDS
+        </Typography>
+        <Typography
+          component={Link}
+          to="/accessories"
+          sx={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            color: 'black',
+            cursor: 'pointer',
+            marginRight: '4%',
+            textDecoration: 'none',
+            ':hover': { color: '#FFA500' },
+          }}
+        >
+          ACCESSORIES
+        </Typography>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }}>
+          BAGS
+        </Typography>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', cursor: 'pointer', marginRight: '2%' }}>
+          BATACLUB
+        </Typography>
         <TextField
           id="search"
           label="Search...."
           variant="standard"
           size="large"
-          sx={{ ml: 0,width:'95%',marginRight:'2%',borderColor:'blue'}}
+          sx={{ ml: 0, width: '95%', marginRight: '2%', borderColor: 'blue' }}
         />
       </Box>
-      
-
     </Box>
   );
 }
 
 export default NaveBar;
-
